@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="unorderlist">
+        <li>list items one</li>
+        <li>list items two</li>
+        <li>list items three</li>
+        <li>list items four</li>
+        <li>list items five</li>
+    </ul>
+</body>
+<script>
+    // const parentlist = document.querySelector('#unorderlist')
+    // parentlist.addEventListener('click',(e)=>{
+    //     // e.target.remove()
+    //     parentlist.removeChild(e.target)
+    //     console.log(e.target);
+    //     // console.log(e.currentTarget);
+
+    // })
+    // console.log(parentlist.children)
+    // var a = 10;
+    // console.log('a: ', a);
+    // {
+    //     var a = 20
+    //     console.log('a: ', a);
+    // }
+
+    //     console.log('a: ', a);
+
+    // const a = 10;
+    // console.log('a: ', a);
+    // {
+    //     const a = 20
+    //     console.log('a: ', a);
+    // }
+
+    //     console.log('a: ', a);
+
+        var a = 10;
+    console.log('a: ', a);
+    function sum(){
+        var a = 20
+        console.log('a: ', a);
+    }
+
+    sum()
+        console.log('a: ', a);
+
+</script>
+</html>
+
+
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+    </style>
+  </head>
+  <body>
+    <div class="inputbox">
+        <label for="userText">Enter Here:</label>
+        <input type="text" id="userText" placeholder="Enter you text you want to feed" size="25">
+    </div>
+    <div class="weekdays">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thrusday</div>
+      <div class="day">Friday</div>
+    </div>
+    <button onclick="handleWeekdays()">Click Here to Add</button>
+    <button id="btn">click</button>
+  </body>
+
+  <script>
+    const parentDiv = document.querySelector(".weekdays");
+    const userText = document.getElementById('userText')
+
+    const handleWeekdays = () => {
+      const div = document.createElement("div");
+      div.setAttribute("class", "day");
+      const paratag = document.createElement("p");
+      
+    paratag.innerText=userText.value
+
+
+      div.appendChild(paratag)
+      parentDiv.appendChild(div);
+      userText.value=""
+
+      console.log("saturday");
+    };
+
+    // document.getElementById('btn').onclick=(e)=>{
+    //     console.log('e: ', e);
+    // }
+
+    document.getElementById('btn').addEventListener('click',(e)=>{
+        console.log(e);
+    })
+
+  </script>
+</html> -->
