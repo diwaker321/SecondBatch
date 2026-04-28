@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forms in html</title>
+  </head>
+  <style>
+    .nameInput {
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+      outline: 1px solid rgb(207, 207, 208);
+    }
+  </style>
+  <body>
+    <form>
+      <!-- <input type="text" placeholder="Your Name" class="nameInput"> -->
+      <label for="Username">Enter Your Name:</label>
+      <input
+      
+        name="Username"
+        id="Username"
+        type="text"
+        placeholder="Your Name"
+        class="nameInput"
+      />
+      <!-- <input type="text" id="" /> -->
+
+      <br /><br />
+
+      <label for="useremail">Enter Your Email Address:</label>
+      <input
+        name="UserEmail"
+        id="useremail"
+        type="email"
+        placeholder=" Your Email"
+        class="nameInput"
+      />
+
+      <br />
+      <br />
+
+      <label for="UserCourse">Enter Your Course:</label>
+      <input
+        name="UserCourse"
+        id="UserCourse"
+        type="text"
+        placeholder="Your Course"
+        class="nameInput"
+      />
+
+      <br />
+      <br />
+
+      <textarea
+        name="UserMessage"
+        id=""
+        rows="6"
+        cols="40"
+        placeholder="Enter your message"
+      ></textarea>
+      <br /><br />
+
+      <input type="submit" value="Submit Now" />
+
+      <hr />
+      <p>Class second of form</p>
+
+      <!-- <label for="">Select your gender:</label> -->
+       <p> your gender</p>
+      <input type="radio" id="male" name="Gender" />
+      <label for="male">Male</label>
+
+      <input type="radio" name="Gender" id="female" />
+      <label for="female">Female</label>
+
+      <input type="radio" id="others" name="Gender" />
+      <label for="others">Others</label>
+
+      <br> <br>
+
+      <label for="">Select your subjects:</label>
+      <input type="checkbox" name="subjectone" />
+      <label >Html</label>
+
+      <input type="checkbox" name="subjecttwo"  />
+      <label >Css</label>
+
+      <input type="checkbox" name="subjectthree"  />
+      <label >Javascript</label>
+
+      <br> <br>
+
+      <label for="color">Select your fav. color</label>
+      <select name="fav_colors" id="color"  >
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="orange">Orange</option>
+        <option value="yellow">Yellow</option>
+        <option value="red" selected>Red</option>
+      </select>
+    </form>
+  </body>
+</html>
+
+<!-- backend side view 
+
+Username: sailash mehar
+UserEmail:sailash123@gmail.com
+UserCourse:bca
+UserMessage:nothing
+Gender:male
+
+subjectone : html
+subjectthree:javascript
+fav_colors:["orange" , "green" , "blue"]
+
+
+
+
+
+-->
