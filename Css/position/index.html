@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+
+      /* position : absolute // parent body  */
       .maincont {
         display: flex;
         padding: 10px;
@@ -13,7 +15,7 @@
         justify-content: center;
       }
 
-      .div{
+      .div {
         width: 200px;
         height: 150px;
         display: flex;
@@ -21,27 +23,46 @@
         align-items: center;
         /* color: white; */
       }
-      .one{
+      .one {
         background-color: red;
       }
-      .two{
+      .two {
         background-color: greenyellow;
       }
-      .three{
+      .three {
         color: white;
         background-color: blue;
       }
-      .four{
+      .four {
         background-color: aquamarine;
+      }
+
+      /* .maincont{
+        position: relative;
+      } */
+
+      /* .one{
+        position: absolute;
+      } */
+      .onechilddiv{
+        width: 50px;
+        height: 50px;
+        background-color: black;
+        color: white;
+        text-align: center;
       }
     </style>
   </head>
   <body>
     <div class="maincont">
-      <div class="div one">one</div>
+      <div class="div one">
+        <div class="onechilddiv"> one</div>
+      </div>
       <div class="div two">two</div>
       <div class="div three">three</div>
       <div class="div four">four</div>
     </div>
+
+    
   </body>
 </html>
