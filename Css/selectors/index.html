@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>selectors</title>
+    <style>
+      /* element selector */
+      h1 {
+      }
+      /* class selector  */
+      .headclass {
+      }
+      /* id seletor */
+      #paraid {
+      }
+
+      /* grouping selectors  */
+      h1,
+      p,
+      span {
+        font-size: 20px;
+      }
+
+      /* universal selector  */
+      /* *{
+        color: red;
+      } */
+
+      /* div p{
+        color: red;
+      } */
+
+      /* .maindiv > p {
+        color: red;
+      } */
+
+      /* + , ~  */
+
+      /* h1 + span{
+        color: red;
+      } */
+
+      /* h1 ~ span{
+        color: red;
+      } */
+
+      /* h1~p{
+        color: red;
+      } */
+    </style>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* div{
+            border: 1px solid black;
+            width: 300px;
+            height: 100px;
+            padding: 20px;
+            margin: 20px;
+        } */
+      body {
+        width: 100%;
+        border: 1px solid black;
+      }
+
+      .maincont{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        border: 1px solid black;
+      }
+
+      .one{
+        background-color: red;
+        width: 50px;
+        height: 50px;
+      }
+      .two{
+        background-color: greenyellow;
+        width: 50px;
+        height: 50px;
+        /* display: none; */
+        /* visibility: hidden; */
+      }
+
+      .two:hover{
+        /* display: none; */
+        cursor: pointer;
+        color: white;
+        background-color: black;
+      }
+
+      .three{
+        background-color: blue;
+        width: 50px;
+        height: 50px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div>
+      <h1 class="headclass">hello world</h1>
+
+      <p id="paraid">hello para</p>
+      <span> hello span </span>
+
+    </div> -->
+
+    <!-- <div class="maindiv">
+        <p>outer p</p>
+        <span>outer span</span>
+        <div>
+            <p>inner p </p>
+            <div>
+                <p>inner inner p</p>
+            </div>
+            <span>inner span</span>
+        </div>
+    </div> -->
+
+    <!-- <div>
+        <h1>hello head</h1>
+        <span>hello span</span>
+        <span>hello span</span>
+        <span>hello span</span>
+
+        <p> hello para</p>
+    </div> -->
+
+    <!-- <p>hello para</p>
+
+    <h1>hello head</h1>
+
+    <div></div> -->
+    <div class="maincont">
+      <div class="one"></div>
+      <!-- <div class="two">hello</div> -->
+      <div class="three"></div>
+    </div>
+  </body>
+</html>
