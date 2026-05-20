@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>units</title>
+    <style>
+        html{
+            /* font-size: 16px; */
+            /* 1rem = 16px */
+            /* font-size: 0.5rem;  */
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* div{
+            width: 50%;
+            border: 1px solid black;
+            height: 500px;
+        } */
+         /* .relative{
+            font-size: 5vw;
+         }
+         .absolute{
+            font-size: 40px;
+         } */
+          .parent{
+            /* font-size: 3rem; */
+            /* font-size: 10px; */
+            /* 1em = 20px  */
+          }
+          .child{
+            font-size: 3rem;
+          }
+          .grandchild{
+            font-size: 3rem;
+          }
+    </style>
+  </head>
+  <body>
+    <!-- <div> -->
+        <!-- <h1 class="relative">relative h1</h1>
+        <h1 class="absolute">absolute h1</h1> -->
+        <div class="parent">
+            parent
+            <div class="child">
+                child
+                <div class="grandchild">
+                    grandchild
+                </div>
+            </div>
+        </div>
+    <!-- </div> -->
+
+  </body>
+</html>
+
+<!-- px , vw , vh , % , cm , in, vmin , vmax  , rem , em -->
+ <!-- px , vw , vh ,% , rem , em  -->
+  <!-- units 2 type 
+    absolute  px
+    relative % , vw , vh , em , rem
+    1vw , 1vh = 1% of width , 1% of height
+  -->
