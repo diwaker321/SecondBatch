@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform - 2D -3d</title>
+    <style>
+
+        .child{
+            width: 600px;
+            height: 300px;
+            background-color: lightblue;
+            transition: all 1s linear;
+        }
+        /* .parent{
+            perspective: 1500px;
+        } */
+        .child:hover{
+            /* transform: translate(5px, 0px); */
+            /* transform: scale(1.1); */
+            /* transform: scaleX(1.1); */
+            /* transform: scaleY(1.1); */
+            /* transform: rotate(15deg); */
+            /* transform: skew(15deg , 30deg); */
+            /* transform: skewY(15deg); */
+            /* transform: perspective(900px) rotateX(180deg); */
+            /* transform: perspective(500px) rotateY(180deg); */
+            transform: perspective(500px) rotateZ(180deg);
+
+
+
+
+
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+</html>
+
+<!-- translate  -->
