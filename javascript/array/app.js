@@ -170,7 +170,35 @@
 // }
 
 // while , for of , for in  , map , filter , reduce , do while
-// let arr=[9,10,2,3,4,5];
+let arr=[9,10,2,3,4,5];
+// arr.at(3)
+console.log('arr.at(1): ', arr.at(1));
+let arr2 = [20,30,40,50]
+
+// let res = arr.join(' ')
+// console.log('res: ', typeof res);
+// console.log('res: ', res);
+
+// let str = "diwaker"
+
+// let res = Array.from(str)
+// console.log('res: ', res);
+
+let arr3= [100,200,300,400]
+// let res = arr2.concat(arr , arr3)
+// console.log('res: ', res);
+
+//array destructure aka spread operators  --> ...arrayname
+// let res = [...arr , ...arr2 , ...arr3]
+// console.log('res: ', res);
+let val = ['diwaker' , 'dwivedi',87654321]
+
+//second type of array destructure
+const[firstname , lastname , password] = val 
+// console.log('password: ', password);
+// console.log('firstname: ', firstname);
+
+
 
 
 // console.log(arr.sort((a,b)=>a-b));
