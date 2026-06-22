@@ -8,7 +8,6 @@
 //     "institute name" :"acadmiac",
 //     greet: function(){
 //         console.log('hello');
-        
 //     }
 // }
 // person.greet()
@@ -112,10 +111,41 @@
 
 // looping in object 
 
+let person = {
+    firstname:"diwaker",
+    lastname:"dwivedi",
+    age:"10",
+    address:"ballupur",
+    "institute name" :"acadmiac",
+    greet: function(){
+        console.log('hello');   
+    }
+}
+// person.firstname
+// person[firstname]
+
+
 // for(let key in person){
 //     // console.log(key);
-//     console.log(person[key]);
+//     console.log(key , person[key]); // value
+//     // console.log(person[key]);
 // }
+
+//spread operator in object [...arr]
+
+// const person1 = {
+//     name1:'diwaker',
+//     age:10,
+// }
+// const person2 = {
+//     name2:'anurag',
+//     age2:'2-'
+// }
+
+// const res = {
+//     ...person1 , ...person2
+// }
+// console.log('res: ', res);
 
 //object destructureing 
 

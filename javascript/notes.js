@@ -8,3 +8,6 @@
 //variables in js 
 //how javascript find the variable 
 //shadow effect of variable
+//hoisting in js
+//tdz in js 
+//introduction of function
