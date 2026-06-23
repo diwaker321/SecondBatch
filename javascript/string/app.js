@@ -36,8 +36,8 @@ let age =10
 // console.log("firstname" , "lastname");
 // console.log("firstname"   + " " +    "lastname");
 
-// console.log("My name is firstname and my age is age");
-// console.log(`My name is ${firstname} and my age is ${age}`);  -- > template literals 
+// console.log("My name is ${firstname} and my age is age");
+// console.log(`My name is ${firstname} and my age is ${age} ${2+2}`); -- template literals 
 
 
 
@@ -70,6 +70,50 @@ let age =10
 // let arr = [10,20,30]
 // arr[1] = 40
 // console.log('arr: ', arr);
+
+// let name = "javascript" //CHOCOLATE
+// let res = name.toUpperCase()
+// console.log( res.startsWith("JAVA"));
+// console.log( name.endsWith("pt"));
+// let email = "diwakergmail.com"
+// console.log( email.includes("@"));
+// if(!email.includes("@")){
+//     console.log("email is wrong"); 
+// }
+
+// let name = "htmlWithJavascript"
+
+// console.log(name.slice(2,6));
+
+
+// console.log(name.slice(-6));
+// console.log(name.substring(2,6))
+
+// console.log(name.indexOf('l'));
+
+// console.log(name.lastIndexOf('a'))
+// console.log(name.at(-1))
+// let subject = " html css javascript html"
+let greet = "hello"
+console.log(greet.repeat(4));
+
+
+
+// console.log(subject.replaceAll('html' , 'react'));
+// console.log(subject.replace('html' , 'react'));
+
+
+
+
+
+
+
+
+// console.log('name: ', name.toUpperCase());
+// console.log('name: ', name.toLowerCase());
+
+
+
 
 
 
@@ -104,4 +148,4 @@ let age =10
 // length property 
 // string concatination  - concat method
 //conversion str to array . split
-// string methods - lower , upper , trim , includes , startswith , ends , indexof , lastindex , substring , replace , 
+// string methods - lower , upper , trim , includes , startswith , ends , indexof , lastindex , substring , replace , slice , repeat
