@@ -192,6 +192,13 @@
 // string methods - lower , upper , trim , includes , startswith , ends , indexof , lastindex , substring , replace , slice , repeat
 // padStart , padEnd,
 
-let value = 'diwaker dwivedi'
-console.log(value.split(" "));
+// let value = 'diwaker dwivedi'
+// console.log(value.split(" "));
+
+let name = 'diwaker'
+let arr = [1,2,3,4,5]
+outout = [5,4,3,2,1]
+let val = 'sun'
+output = 'nus' // reverse
+output --> rekawid // reverse 
 
