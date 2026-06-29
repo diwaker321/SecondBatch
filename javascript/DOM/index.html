@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object model</title>
+</head>
+<body>
+    <h1  id="head">hello world</h1>
+    <span class="inlinetag">span tag one</span>
+    <span class="inlinetag">span tag two</span>
+    <span class="inlinetag">span tag three</span>
+    <span class="inlinetag">span tag four</span>
+
+
+
+    
+</body>
+<script>
+    // how to get the html elements
+        // 3 types 
+            // id , class , tag 
+    // const head = document.getElementById('head')
+    // console.log('head: ', head);
+
+    const spantag = document.getElementsByClassName('inlinetag')
+
+    // console.log('spantag: ', spantag.map(res=>console.log(res)));
+    console.log('spantag: ', spantag);
+    // const arr = Array.from(spantag)
+    const arr = [...spantag]
+    console.log('arr: ', arr);
+
+    // Math function in javascript 
+
+
+
+</script>
+</html>
