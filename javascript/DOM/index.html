@@ -20,19 +20,50 @@
     // how to get the html elements
         // 3 types 
             // id , class , tag 
+            //queryselector and querySeletorAll
     // const head = document.getElementById('head')
     // console.log('head: ', head);
 
-    const spantag = document.getElementsByClassName('inlinetag')
+    // const spantag = document.getElementsByClassName('inlinetag')
 
     // console.log('spantag: ', spantag.map(res=>console.log(res)));
-    console.log('spantag: ', spantag);
+    // console.log('spantag: ', spantag);
     // const arr = Array.from(spantag)
-    const arr = [...spantag]
-    console.log('arr: ', arr);
+    // const arr = [...spantag] //spread operator. 
+    // console.log('arr: ', arr);
+
+    // const headtag = document.getElementsByTagName('h1')
+    // console.log('headtag: ', headtag);
 
     // Math function in javascript 
 
+    //query selector. 
+    // const head = document.querySelector('#head')
+    // console.log('head: ', head);
+    // const span = document.querySelector('.inlinetag')
+    // const span = document.querySelectorAll('.inlinetag')
+
+    
+    // console.log('span: ', span);
+
+    const head = document.querySelector("#head")
+    head.style.color = 'red'
+    head.style.backgroundColor = 'black'
+    head.style.border='10px solid yellow'
+    head.innerHTML='good morning'
+    console.log(head);
+    // head.innerHTML
+    // console.log( head.innerHTML);
+    // console.log( head.innerText);
+    // console.log( head.textContent);
+
+    // console.log('head: ', head);
+
+
+    //how to get the element
+    //how to get the element content
+    //how to change the element content
+    //how to change your element style
 
 
 </script>

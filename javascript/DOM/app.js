@@ -4,6 +4,8 @@
 //query selectors and query selector all
 //what is htmlcollection and nodelist
 // how to change content
+    //innerHTML , textcontent , innerText
+
 //how to change style
 //how to add class using classlist
 //how to change attributes.
