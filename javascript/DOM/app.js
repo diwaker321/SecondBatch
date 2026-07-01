@@ -7,6 +7,7 @@
     //innerHTML , textcontent , innerText
 
 //how to change style
+//how to create a new element
 //how to add class using classlist
 //how to change attributes.
 //how to use get and setattributes
