@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="parent">
+        Parent
+        <button id="child">Click Me</button>
+    </div>
+
+    <ul id="list">
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Banana</li>
+    </ul>
+</body>
+<script>
+    const parent = document.getElementById("parent");
+    const child = document.getElementById("child");
+
+    parent.addEventListener("click", (e) => {
+        e.stopPropagation()
+        console.log("Parent clicked");
+    } );
+
+    child.addEventListener("click", (e) => {
+        e.stopPropagation()
+        console.log("Child clicked");
+    });
+
+
+
+        //event delegation
+    const list = document.getElementById("list");
+
+    list.addEventListener("click", (e) => {
+        console.log(e.target.remove());
+    });
+</script>
+
+</html>
