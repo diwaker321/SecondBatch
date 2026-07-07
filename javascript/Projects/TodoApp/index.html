@@ -95,11 +95,15 @@
         todoArr[editindex] = editLi.innerText
         localStorage.setItem('todos' , JSON.stringify(todoArr))
         editLi = null;
-        input.value = "";
         button.innerText = "Add";
+        input.value = "";
+        rendertodos()
         return;
       }
+      todoArr.push(input.value)
+      localStorage.setItem('todos' , JSON.stringify(todoArr))
       input.value = "";
+      rendertodos()
     });
   </script>
 </html>
