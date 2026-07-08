@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>parent child node in dom</title>
+  </head>
+  <body>
+    <!-- <div id="parent">
+      <p id="para">hello</p>
+      <h1 id="head">world</h1>
+      <span id="span"> coders</span>
+    </div> -->
+    <button id="btn"> Btn clicked</button>
+  </body>
+  <script>
+    const btn = document.getElementById('btn')
+    function handleClick (){
+        console.log('clicked');
+        btn.removeEventListener('click' , handleClick)
+    }
+    btn.addEventListener('click' , handleClick)
+
+    // const div = document.getElementById("parent");
+    // const p = document.getElementById("para");
+    // const h1 = document.getElementById("head");
+    // const span = document.getElementById("span");
+
+    // console.log(p.parentNode);
+    // console.log(p.parentElement);
+
+    //children
+    // console.log(div.childNodes);
+    // console.log(div.children);
+
+    // console.log(div.firstChild);
+    // console.log(div.firstElementChild);
+
+    //siblings nodes
+    // console.log(p.nextSibling);
+    // console.log(p.nextElementSibling);
+
+    // console.log(p.previousSibling);
+    // console.log(p.previousElementSibling);
+
+
+
+    
+    
+    
+    
+
+    
+    
+
+
+  </script>
+</html>
