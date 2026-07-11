@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo app</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <h1 class="font-bold text-4xl text-center bg-black text-white p-5">
+      todo app
+    </h1>
+    <div class="inputsection flex justify-center items-center mt-5 gap-2">
+      <input id="textInput" type="text" placeholder="Type here" class="input" />
+      <button id="btn" class="btn">Add</button>
+    </div>
+    <div class="todoListSection">
+      <ul class="text-center flex flex-col items-center mt-5" id="list"></ul>
+    </div>
+  </body>
+  <script>
+    let input = document.getElementById("textInput");
+    let button = document.getElementById("btn");
+    const list = document.getElementById("list");
+    const div = document.getElementById("div");
+    let editLi = null;
+    let editindex = null
+    let todoArr = JSON.parse(localStorage.getItem("todos")) || [];
+    console.log(todoArr);
+
+    function rendertodos() {
+      list.innerHTML = "";
+      todoArr.forEach((res, index) => {
+        const li = document.createElement("li");
+        li.classList.add(
+          "border",
+          "w-90",
+          "p-2",
+          "bg-gray-50",
+          "mb-2",
+          "rounded-sm",
+        );
+        li.innerText = res;
+
+        const listContainer = document.createElement("div");
+        listContainer.classList.add("flex", "gap-3", "items-center");
+        listContainer.appendChild(li);
+
+        const editpen = document.createElement("i");
+        editpen.classList.add("fa-solid", "fa-pen-to-square");
+        listContainer.appendChild(editpen);
+
+        editpen.addEventListener("click", () => {
+          input.value = li.innerText;
+
+          button.innerText = "Update";
+
+          editLi = li;
+          editindex = index
+        });
+
+        const deleteicon = document.createElement("i");
+        deleteicon.classList.add("fa-solid");
+        deleteicon.classList.add("fa-trash-can");
+        listContainer.appendChild(deleteicon);
+
+        deleteicon.addEventListener("click", (e) => {
+          todoArr.splice(index, 1);
+          localStorage.setItem("todos", JSON.stringify(todoArr));
+          rendertodos();
+        });
+
+        list.appendChild(listContainer);
+      });
+    }
+    rendertodos();
+
+    button.addEventListener("click", (e) => {
+      if (editLi) {
+        editLi.innerText = input.value;
+        todoArr[editindex] = editLi.innerText
+        localStorage.setItem('todos' , JSON.stringify(todoArr))
+        editLi = null;
+        button.innerText = "Add";
+        input.value = "";
+        rendertodos()
+        return;
+      }
+      todoArr.push(input.value)
+      localStorage.setItem('todos' , JSON.stringify(todoArr))
+      input.value = "";
+      rendertodos()
+    });
+  </script>
+</html>

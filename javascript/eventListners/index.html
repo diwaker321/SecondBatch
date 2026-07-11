@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listners</title>
+</head>
+<body>
+    <h1 id="head">good morning</h1>
+    <!-- <button id="btn2"> get original content</button> -->
+    
+    <form id="form">
+        <input id="nameInput" type="text" placeholder="Enter your name">
+        <input id="passwordInput" type="password" placeholder=" enter your password">
+        <input id="submitBtn" type="submit" value="Submit Your Form">
+    </form>
+    <!-- <button id="btn">Submit</button> -->
+</body>
+
+<script>
+    const form  = document.getElementById('form') // submit event
+    const nameInput = document.getElementById('nameInput')
+    const passwordInput = document.getElementById('passwordInput')
+    const submitBtn = document.getElementById('submitBtn')
+
+    form.addEventListener('submit' , (event)=>{
+        event.preventDefault()
+        console.log("called"); 
+    })
+
+    nameInput.addEventListener('change',(event)=>{
+        // console.log(event.target.value);
+        // console.log(nameInput.value);
+        
+        // console.log('change event is triggered');
+        // if(nameInput.value.length>7){
+        //     console.log(''); 
+        // }  
+        
+    })
+
+    // nameInput.addEventListener('input',(event)=>{
+    //     // console.log(event.target.value);
+    //     console.log(nameInput.value);  
+    // })
+
+    // nameInput.addEventListener('focus',(event)=>{
+    //     // console.log(event.target.value);
+    //     console.log(nameInput.value);  
+    // })
+
+    // nameInput.addEventListener('blur',(event)=>{
+    //     // console.log(event.target.value);
+    //     console.log(nameInput.value);  
+    // })
+    
+
+    
+</script>
+
+<!-- <script>
+    // console.log('running'); 
+    // const head = document.getElementById('head')
+    // const btn = document.getElementById('btn')
+    // btn.addEventListener('click' , ()=>{
+    //     head.innerText="class over"
+    // })
+    // btn.onclick = function(){
+    //     console.log('hello world');
+    // }
+
+    // btn.addEventListener('dblclick' , ()=>{
+    //     console.log('event triggered');
+        
+    //     head.innerText="class over"
+    // })
+
+    // btn.addEventListener('mouseover' , ()=>{
+    //     console.log('event triggered');
+        
+    //     head.innerText="class over"
+    // })
+
+    // btn.addEventListener('mouseout' , ()=>{
+    //     console.log('event triggered');
+        
+    //     head.innerText="class over"
+    // })
+
+    // btn.addEventListener('mousedown' , ()=>{
+    //     console.log('event triggered');
+        
+    //     head.innerText="class over"
+    // })
+
+    // btn.addEventListener('mouseup' , ()=>{
+    //     console.log('event triggered');
+        
+    //     head.innerText="class over"
+    // })
+
+    // document.addEventListener('keydown' , ()=>{
+    //     console.log('event triggered');
+        
+    //     head.innerText="class over"
+    // })
+
+    // document.addEventListener('keyup' , (event)=>{
+    //     console.log(event.key);
+        
+    //     // console.log('event triggered');
+        
+    //     head.innerText="class over"
+    // })
+
+    // console.log('end');
+</script> -->
+</html>
+
+<!-- output-> -->
+
+<!-- 
+ //div -> bgcol -> btn click
+//add div element in body ->btnclick
+div style -> hight , width , border , bgcol, 
+div consist of p tag
+p tag content - > about yourself
+
+//div-> hover-> width and hight grow
+    div->out->width and hight original size
+
+
+-->
+
+
+<!--
+ concept in event 
+
+
+  -->

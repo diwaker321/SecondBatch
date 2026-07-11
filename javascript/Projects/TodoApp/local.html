@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>local storage</h1>
+    <input id="inputtext" type="text" placeholder="enter a value">
+    <button id="btn">Click here</button>
+    <ul id="list"></ul>
+</body>
+<script>
+    const inputtext = document.getElementById('inputtext')
+    const btn = document.getElementById('btn')
+    const ul = document.getElementById('list')
+    // let arr = []
+    let arr = JSON.parse(localStorage.getItem('localarray')) || []
+    // console.log( arr);
+
+    function getitems(){
+        ul.innerHTML=""
+        arr.forEach(res=>{
+        console.log(res);
+        const li = document.createElement('li')
+        li.innerText = res
+        ul.appendChild(li)  
+        
+    })
+    }
+
+    getitems()
+    
+    btn.addEventListener('click' , (e)=>{
+        // console.log(inputtext.value);
+        arr.push(inputtext.value)
+        console.log(arr);
+        localStorage.setItem('localarray' , JSON.stringify(arr))
+        inputtext.value=""
+        getitems();
+    })
+
+</script>
+</html>

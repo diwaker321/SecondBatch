@@ -11,3 +11,5 @@
 //hoisting in js
 //tdz in js 
 //introduction of function
+//dom is completed
+//event listeners
