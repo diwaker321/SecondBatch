@@ -1,10 +1,80 @@
 // how to write string 
+
+// what is string ?
+// char a,b,c,d,f,g,,,b,f,v,f 
+
+
+
+
+// String - combination of your char 
+// diwaker 
+// diwaker - > variable 
+// diwaker - > "diwaker" , 'diwaker'
+
+// let a  = 10;
+// console.log('a' , a);
+
+// length property 
+// let name = '     diwaker        '
+// let name2 = "                                                                                      "
+// console.log('name2: ', name2.length);
+// trim()
+//length
+// console.log(name.trim().length);
+
+// const firstname = "diwaker"
+// // console.log(firstname[2]);
+// console.log(firstname[firstname.length - 1]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // let firstname = '                                                                         diwaker            '
-// let firstname = 'diwaker'
 // console.log('firstname: ', firstname[firstname.length-1]); // index
+
+
+
+// let firstname = 'diwaker'
+// firstname[0] = 't'
+// console.log('firstname: ', firstname);
 // for(let i =0;i<firstname.length;i++){
 // console.log('firstname: ', firstname[i]); // index
 // }
+
+// let arr=['apple' , 'pineapple' , "banana"]
+// arr[2] = "mango"
+// console.log('arr: ', arr);
+
+//string is immutable? 
+//array is mutable - push , pop , splice , slice
+
+let firstname = 'diwaker'
+
+//convert string to array 
+// split()
+console.log(firstname.split(""));
+
+
+
+
+
+
+
+
 // firstname[3] = 'Z' 
 
 // let str = firstname.split('')
@@ -195,10 +265,10 @@
 // let value = 'diwaker dwivedi'
 // console.log(value.split(" "));
 
-let name = 'diwaker'
-let arr = [1,2,3,4,5]
-outout = [5,4,3,2,1]
-let val = 'sun'
-output = 'nus' // reverse
-output --> rekawid // reverse 
+// let name = 'diwaker'
+// let arr = [1,2,3,4,5]
+// outout = [5,4,3,2,1]
+// let val = 'sun'
+// output = 'nus' // reverse
+// output --> rekawid // reverse 
 
