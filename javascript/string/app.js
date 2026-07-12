@@ -62,11 +62,19 @@
 //string is immutable? 
 //array is mutable - push , pop , splice , slice
 
-let firstname = 'diwaker'
+// let firstname = 'diwaker'
+// firstname[0] = 't'
+// console.log('firstname: ', firstname);
 
 //convert string to array 
 // split()
-console.log(firstname.split(""));
+// console.log(firstname.split(""));
+// const arrayName = firstname.split("")
+// arrayName[0] = 't'
+// console.log('arrayName: ', arrayName);
+// arrayName.join("")
+// console.log('arrayName.join(""): ', arrayName.join(""));
+
 
 
 
@@ -86,6 +94,8 @@ console.log(firstname.split(""));
 // console.log('str: ', str);
 // console.log(str.join());
 
+// Array.from() 
+
 // let res = Array.from(str)
 // console.log('res: ', res);
 // console.log('firstname: ', firstname);
@@ -103,11 +113,37 @@ console.log(firstname.split(""));
 // let lastname1 ='dwivedi'
 // let lastname2 = `dwivedi` // backtiks -->template literals
 
+ 
+// template literals  -> variable run string
+
+// const age = 15;
+
+// const name = 'anurag age'
+// const name = "anurag age"
+// const name = `anurag ${age}`
+// console.log('name: ', name);
+
+// const firstname = 'diwaker'
+// const lastname = "dwivedi"
+
+// console.log(firstname);
+// console.log("firstname" + " " + "lastname")
+
+// console.log("hello
+//     world");
+
+// console.log(`hello
+//     world`);
+
+
+
+
+
 // console.log("firstname" , "lastname");
 // console.log("firstname"   + " " +    "lastname");
 
 // console.log("My name is ${firstname} and my age is age");
-// console.log(`My name is ${firstname} and my age is ${age} ${2+2}`); -- template literals 
+// console.log(`My name is ${firstname} and my age is ${age} ${2+2}`);
 
 
 
@@ -135,11 +171,34 @@ console.log(firstname.split(""));
 //     name:"diwaker"
 // }
 
+// person.name = "anurag"
+// console.log('person: ', person);
+
 
 
 // let arr = [10,20,30]
 // arr[1] = 40
 // console.log('arr: ', arr);
+
+
+
+//method in sting
+
+// console.log(2+2);
+// console.log("10"+'2'); // string concatination
+// console.log(100+100 + '1' + 10+2+5 + '1');
+// const name = 'diwaker'
+// console.log('name: ', name.toUpperCase());
+// console.log(name.startsWith("DIW"));
+// console.log(name.endsWith("er"));
+// includes
+const email = "diwaker@gmail.com"
+// console.log(email.includes('@'));
+
+
+
+
+
 
 // let name = "javascript" //CHOCOLATE
 // let res = name.toUpperCase()
