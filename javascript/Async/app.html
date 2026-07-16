@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>callback conecpt</h1>
+</body>
+<script>
+    // callback hell - > 
+    // addEventListener('click' , ()=>{
+    //     console.log('hello');
+    // })
+
+    // setTimeout(() => {
+        
+    // }, 2000);
+
+    // setInterval(()=>{
+
+    // },1000)
+
+    // arr.map((res)=>{
+        
+    // })
+
+    // eg . 
+
+    // selectproduct--->payment ----> orderplace -----> delivery ----> done
+
+    function selectproduct(callback){
+        console.log('product select successfully');
+        callback()
+    }
+
+     function payment(callback){
+        setTimeout(() => {
+            console.log('payment cant be done'); 
+        }, 5000);
+        callback()
+     }
+
+     function orderplace(callback){
+            console.log('order placed successfully');
+
+        callback();
+     }
+     function delivery(){
+        console.log("product has been delivered");
+        
+     }
+
+    selectproduct(function(){
+        payment(function(){
+            orderplace(function(){
+                delivery()
+            })
+        })
+    })
+
+    // selectroute ----> selectride ----> waitstate ----> otpgeneration ----> ridecompleted -----> payment ----> reviewFn ---> done
+
+    // promise in js 
+
+
+</script>
+</html>

@@ -210,7 +210,7 @@ const email = "diwaker@gmail.com"
 //     console.log("email is wrong"); 
 // }
 
-// let name = "htmlWithJavascript"
+// let name = "hltmlWilthJavascript"
 
 // console.log(name.slice(2,6));
 
@@ -228,8 +228,8 @@ const email = "diwaker@gmail.com"
 
 // let otp = '7876'
 // console.log('otp: ', otp.length);
-// console.log(otp.padStart( 22, "*"));
-// console.log(otp.padEnd( 10, "*"));
+// console.log(otp.padStart( 10, "*"));
+// console.log(otp.padEnd( 16, "*"));
 // let nname = '        diwaker         '
 // console.log(nname.length);
 // console.log( nname.trimStart().length);
@@ -238,6 +238,10 @@ const email = "diwaker@gmail.com"
 
 // let a ='1000';
 // let b = '1000';
+// console.log(a/b);
+// console.log(a - 'diwaker');
+
+
 
 // in case of string --> these airthmetic operation will work -> * , - , /
 // but in case of addition i.e --> + it will not work 
@@ -249,7 +253,7 @@ const email = "diwaker@gmail.com"
 // console.log('diwaker' * ' dwivedi');
 
 
-// 3 + 4 + '10' = 7 + '10'  = 710
+// 3 + 4 + '10' - 7 + '10'
 
 // 10 + 20 + 30 + '40' + 50 = 
 // console.log('d'+10 + 20 + 30 + '40' + 50 + 'd');
@@ -267,10 +271,11 @@ const email = "diwaker@gmail.com"
 
 
 
+let subject = " html css javascript html"
 
 
-// console.log(subject.replaceAll('html' , 'react'));
 // console.log(subject.replace('html' , 'react'));
+// console.log(subject.replaceAll('html' , 'react'));
 
 
 
@@ -330,4 +335,15 @@ const email = "diwaker@gmail.com"
 // let val = 'sun'
 // output = 'nus' // reverse
 // output --> rekawid // reverse 
+
+//for loop ;
+//swapping a number
+
+// eg 
+// let a =10;
+// let b = 20;
+
+// output 
+// b=10;
+// a=20;
 
