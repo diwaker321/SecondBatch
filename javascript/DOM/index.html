@@ -12,16 +12,37 @@
     </style>
   </head>
   
-  <!-- <body>
+  <body>
     <h1 id="head">hello world</h1>
     <span class="inlinetag">span tag one</span>
     <span class="inlinetag">span tag two</span>
     <span class="inlinetag">span tag three</span>
     <span class="inlinetag">span tag four</span>
-    <div>
-        <img src="" alt="" />
-    </div>
-  </body> -->
+  </body>
+
+
+  <script>
+    // how to get the elements in js
+
+    // id and class 
+
+    const head =  document.getElementById('head')
+    console.log('head: ', head);
+
+    const inlinetag =  document.getElementsByClassName('inlinetag')
+    console.log('inlinetag: ', inlinetag.length);
+    
+    for(let i =0 ; i<inlinetag.length;i++){
+      console.log('inlinetag: ', inlinetag[i]);
+
+    }
+
+
+  </script>
+
+
+
+
   <script>
     // createElement and appenChild , classlist
     //setattributes and getattribute
@@ -107,9 +128,9 @@
 </script> -->
 
 
-//event listners 
-<body>
+<!-- //event listners  -->
+<!-- <body>
     <h1>hello world</h1>
-  </body>
+  </body> -->
 
 </html>
