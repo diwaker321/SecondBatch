@@ -9,6 +9,17 @@
             padding: 10px;
             border: 2px solid red;
         }
+
+        .imgclass{
+          width: 200px;
+        }
+
+        .anchorclass{
+          border: 2px solid black;
+          background-color: yellow;
+          font-size: 30px;
+          color: red;
+        }
     </style>
   </head>
   
@@ -18,6 +29,15 @@
     <span class="inlinetag">span tag two</span>
     <span class="inlinetag">span tag three</span>
     <span class="inlinetag">span tag four</span>
+    <span class="spanclass"> span tag five</span>
+
+    <br>
+
+    <img id="logo" src="" alt="" >
+
+    <br> <br>
+
+    <a href="https://acadmiac.com/" id="anchor">click here</a>
   </body>
 
 
@@ -26,16 +46,74 @@
 
     // id and class 
 
-    const head =  document.getElementById('head')
-    console.log('head: ', head);
+    // const head =  document.getElementById('head')
+    // console.log('head: ', head);
 
-    const inlinetag =  document.getElementsByClassName('inlinetag')
-    console.log('inlinetag: ', inlinetag.length);
+    // const head = document.querySelector("#head")
+    // console.log('head: ', head);
+
+    // const inlinetag =  document.getElementsByClassName('inlinetag')
+    // console.log('inlinetag: ', inlinetag);
+
+    // const arrayinline = Array.from(inlinetag)
+    // console.log('arrayinline: ', arrayinline);
+
+    // const inlinetag = document.querySelectorAll(".inlinetag")
+    // console.log('inlinetag: ', inlinetag);
     
-    for(let i =0 ; i<inlinetag.length;i++){
-      console.log('inlinetag: ', inlinetag[i]);
+    // for(let i =0 ; i<inlinetag.length;i++){
+    //   console.log('inlinetag: ', inlinetag[i]);
 
-    }
+    // }
+
+    // const spantag = document.getElementsByTagName('span')
+    // console.log('spantag: ', spantag);
+
+
+    //how to set attributes in elements using js
+
+    const logo = document.querySelector("#logo")
+    console.log('logo: ', logo);
+
+
+
+    logo.setAttribute("src" , "https://acadmiac.com/wp-content/uploads/2026/01/logo-acadmiac-tagline.png")
+    logo.setAttribute("alt" , "acadmiac_logo")
+    // logo.setAttribute("width" , "200px")
+
+
+    //how to get the attributes
+
+    const anchor = document.getElementById("anchor")
+
+    // anchor.classList.add("anchorclass")
+
+    // anchor.classList.remove("anchorclass")
+
+    // anchor.classList.toggle("anchorclass")
+
+    // anchor.classList.contains("anchorclass")
+    // console.log('anchor.classList.contains("anchorclass"): ', anchor.classList.contains("anchorclass"));
+
+    //how to style your tags.
+
+    // anchor.style.fontSize = "30px"
+    // anchor.style.color = "red"
+    // anchor.style.backgroundColor = "yellow"
+    // anchor.style.border = "2px solid black"
+
+    // anchor.getAttribute("href")
+    // console.log('anchor.getAttribute("href"): ', anchor.getAttribute("href"));
+
+
+    // how to add the class attribute
+
+    logo.classList.add("imgclass")
+
+
+
+
+
 
 
   </script>
