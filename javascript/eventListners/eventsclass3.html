@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<body>
+    <h1>events in js</h1>
+<!-- 
+    <form id="form" action="">
+        <input id="input" type="text" placeholder="Enter your name">
+        <br> <br>
+        <input type="password" placeholder="enter your password">
+        <br>
+        <br>
+        <input type="submit" value="Submit your form">
+    </form> -->
+
+    <div id="parent" style="border: 1px solid black;">
+        <button id="child">Click here</button>
+    </div>
+
+    <!-- <button> plus</button>
+    <button>minus</button> -->
+
+    <!-- <button id="btn">click here</button> -->
+</body>
+
+<script>
+    //event bubbling and event capturing
+    const parent = document.getElementById("parent")
+    const child = document.getElementById("child")
+
+    parent.addEventListener("click" , (event)=>{
+        event.stopPropagation()
+        console.log("parent called");
+    })
+
+    
+    child.addEventListener("click" , (event)=>{
+        event.stopPropagation()
+        console.log("child called");
+    })
+
+</script>
+
+<!-- <script>
+    
+    // get the values of name and password 
+    // if username is empty log -> please enter the username and if password is empty -> please enter the password
+    
+    // const form = document.getElementById("form")
+    // const input = document.getElementById("input")
+    // form.addEventListener("submit" , (event)=>{
+    //     event.preventDefault()
+    //     console.log(input.value);   
+    // })
+
+    
+</script> -->
+
+
+<!-- <script>
+    // const btn = document.getElementById("btn")
+    // const input = document.getElementById("input")
+
+    // btn.addEventListener("click" , (event)=>{
+    //     console.log('event: ', event);
+    //     console.log('clicked'); 
+    // })
+
+    // input.addEventListener("input" , (event)=>{
+    //     // console.log(event.target.value);
+    //     // console.log(input.value);
+    // })
+
+    
+    // input.addEventListener("change" , (event)=>{
+    //     console.log(event.target.value);
+    //     // console.log(input.value);
+    // })
+
+    // input.addEventListener("focus" , (event)=>{
+    //     console.log("activated");
+        
+    //     console.log(event.target.value);
+    //     // console.log(input.value);
+    // })
+
+    // input.addEventListener("blur" , (event)=>{
+    //     // console.log("activated");
+        
+    //     console.log(event.target.value);
+    //     // console.log(input.value);
+    // })
+
+    // document.addEventListener("keyup" , (e)=>{
+    //     console.log(e.key);
+    //     // console.log("key up");
+    // } )
+</script> -->
+</html>
