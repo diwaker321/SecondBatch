@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            
+        }
+        body{
+            padding: 10px;
+        }
+        input{
+            margin: 5px;
+        }
+
+        p{
+            padding-left: 5px;
+
+        }
+    </style>
+  </head>
+  <body>
+    <h1>form</h1>
+    <form id="form">
+      <label for="nameinput">Enter your name *</label>
+      <br> 
+    
+      <input type="text" id="nameinput" placeholder="enter your name" />
+
+      <br />
+      <p id="nameerror" style="color: red;"></p>
+      <label for="passwordinput">Enter your password *</label>
+      <br>
+      <input type="password" id="passwordinput" placeholder="enter your password" />
+      <br>
+      <p id="passworderror" style="color: red;"></p>
+
+
+      <input type="submit" id="submitbtn">
+
+    </form>
+  </body>
+
+  <script>
+    const form = document.getElementById("form")
+    const nameinput = document.getElementById("nameinput")
+    const passwordinput = document.getElementById("passwordinput")
+    const nameerror = document.getElementById("nameerror")
+    const passworderror = document.getElementById("passworderror")
+
+    form.addEventListener("submit" , (event)=>{
+        event.preventDefault()
+        // console.log("your values");
+
+        if(passwordinput.value===""){
+            passworderror.innerText = "Please enter your password *"
+        }
+        if(nameinput.value===""){
+            nameerror.innerText = "Please enter your name*"
+        }
+
+
+        console.log(nameinput.value); // ""
+        console.log(passwordinput.value); //12345
+
+        if(nameinput.value === "" || passwordinput.value === ""){
+            alert("kindly complete your form")
+        }
+        else{
+            alert("data submitted Successfully");
+        }
+
+        
+        
+        
+        
+
+    })
+  </script>
+</html>
