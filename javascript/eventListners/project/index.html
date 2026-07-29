@@ -49,37 +49,38 @@
 
   <script>
     const form = document.getElementById("form")
-    const nameinput = document.getElementById("nameinput")
-    const passwordinput = document.getElementById("passwordinput")
     const nameerror = document.getElementById("nameerror")
     const passworderror = document.getElementById("passworderror")
-
+    
     form.addEventListener("submit" , (event)=>{
+        const nameinput = document.getElementById("nameinput").value.trim()  // ""
+        const passwordinput = document.getElementById("passwordinput").value.trim()  //""
         event.preventDefault()
         // console.log("your values");
 
-        if(passwordinput.value===""){
-            passworderror.innerText = "Please enter your password *"
-        }
-        if(nameinput.value===""){
+        nameerror.innerText = ""
+        passworderror.innerText =""
+
+        if(nameinput===""){ // "" ===""
             nameerror.innerText = "Please enter your name*"
         }
+        if(passwordinput===""){ //"" === ""
+            passworderror.innerText = "Please enter your password *"
+        }
 
 
-        console.log(nameinput.value); // ""
-        console.log(passwordinput.value); //12345
+        console.log(nameinput); // ""
+        console.log(passwordinput); //12345
 
-        if(nameinput.value === "" || passwordinput.value === ""){
+        if(nameinput === "" || passwordinput === ""){
             alert("kindly complete your form")
         }
         else{
             alert("data submitted Successfully");
         }
 
-        
-        
-        
-        
+    // password minimun - > 5letter
+    // name minimun -->3 letter    
 
     })
   </script>
