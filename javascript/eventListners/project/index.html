@@ -6,82 +6,104 @@
     <title>form</title>
 
     <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            
-        }
-        body{
-            padding: 10px;
-        }
-        input{
-            margin: 5px;
-        }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        padding: 10px;
+      }
+      input {
+        margin: 5px;
+      }
 
-        p{
-            padding-left: 5px;
-
-        }
+      p {
+        padding-left: 5px;
+      }
     </style>
   </head>
   <body>
     <h1>form</h1>
     <form id="form">
       <label for="nameinput">Enter your name *</label>
-      <br> 
-    
+      <br />
+
       <input type="text" id="nameinput" placeholder="enter your name" />
 
       <br />
-      <p id="nameerror" style="color: red;"></p>
+      <p id="nameerror" style="color: red"></p>
       <label for="passwordinput">Enter your password *</label>
-      <br>
-      <input type="password" id="passwordinput" placeholder="enter your password" />
-      <br>
-      <p id="passworderror" style="color: red;"></p>
+      <br />
+      <input
+        type="password"
+        id="passwordinput"
+        placeholder="enter your password"
+      />
+      <br />
+      <p id="passworderror" style="color: red"></p>
 
-
-      <input type="submit" id="submitbtn">
-
+      <input type="submit" id="submitbtn" />
     </form>
   </body>
 
   <script>
-    const form = document.getElementById("form")
-    const nameerror = document.getElementById("nameerror")
-    const passworderror = document.getElementById("passworderror")
-    
-    form.addEventListener("submit" , (event)=>{
-        const nameinput = document.getElementById("nameinput").value.trim()  // ""
-        const passwordinput = document.getElementById("passwordinput").value.trim()  //""
-        event.preventDefault()
-        // console.log("your values");
+    const form = document.getElementById("form");
+    const nameerror = document.getElementById("nameerror");
+    const passworderror = document.getElementById("passworderror");
+    const passwordinput = document.getElementById("passwordinput"); //""
+    const nameinput = document.getElementById("nameinput"); // ""
 
-        nameerror.innerText = ""
-        passworderror.innerText =""
+    form.addEventListener("submit", (event) => {
+      const nameinput = document.getElementById("nameinput").value.trim(); // ""
+      const passwordinput = document
+        .getElementById("passwordinput")
+        .value.trim(); //""
+      event.preventDefault();
+      // console.log("your values");
 
-        if(nameinput===""){ // "" ===""
-            nameerror.innerText = "Please enter your name*"
-        }
-        if(passwordinput===""){ //"" === ""
-            passworderror.innerText = "Please enter your password *"
-        }
+      nameerror.innerText = "";
+      passworderror.innerText = "";
 
+      let isValid = true;
 
-        console.log(nameinput); // ""
-        console.log(passwordinput); //12345
+      if (nameinput === "") {
+        // "" ===""
+        nameerror.innerText = "Please enter your name*";
+        isValid = false;
+      }
+      if (passwordinput === "") {
+        //"" === ""
+        passworderror.innerText = "Please enter your password *";
+        isValid = false;
+      }
 
-        if(nameinput === "" || passwordinput === ""){
-            alert("kindly complete your form")
-        }
-        else{
-            alert("data submitted Successfully");
-        }
+      console.log(nameinput); // ""
+      console.log(passwordinput); //12345
 
-    // password minimun - > 5letter
-    // name minimun -->3 letter    
+      if (isValid) {
+        alert("data submitted Successfully");
+      } else {
+        alert("kindly complete your form");
+      }
 
-    })
+      // if(nameinput === "" || passwordinput === ""){
+      //     alert("kindly complete your form")
+      // }
+      // else{
+      //     alert("data submitted Successfully");
+      // }
+
+      // password minimun - > 5letter
+      // name minimun -->3 letter
+    });
+
+    nameinput.addEventListener("input", (event) => {
+      nameerror.innerText = "";
+    });
+
+    passwordinput.addEventListener("input", (event) => {
+      passworderror.innerText = "";
+    });
   </script>
 </html>
