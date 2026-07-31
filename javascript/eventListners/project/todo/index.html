@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo app</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+      integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="mainContainer flex justify-center pt-10">
+      <div class="bodysection">
+        <div class="card w-96 bg-gray-300 card-md shadow-sm">
+          <div class="card-body">
+            <h2 class=" text-center  text-2xl ">Todo Card</h2>
+            <div class="flex gap-3">
+              <input id="textInput" type="text" placeholder="Enter your Task" class="input" />
+              <div class="justify-end card-actions">
+                <button id="addBtn" class="btn btn-primary">Add</button>
+              </div>
+            </div>
+            <div class="showContentDiv">
+                <ul id="todolist">
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const textInput = document.getElementById("textInput")
+    const addBtn = document.getElementById("addBtn")
+    const todolist = document.getElementById("todolist")
+
+    addBtn.addEventListener("click" , (event)=>{
+        const task = textInput.value
+
+        const li = document.createElement("li")
+        li.innerText = task
+
+        todolist.appendChild(li)
+        console.log('task: ', task);
+
+        textInput.value = ""
+    })
+
+  </script>
+</html>
