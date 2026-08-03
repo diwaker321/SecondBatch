@@ -46,12 +46,52 @@
     const textInput = document.getElementById("textInput")
     const addBtn = document.getElementById("addBtn")
     const todolist = document.getElementById("todolist")
+    let selectedLi = null
 
     addBtn.addEventListener("click" , (event)=>{
+
+      if(selectedLi){
+        selectedLi.innerText = textInput.value
+        console.log('selectedLi: ', selectedLi);
+        addBtn.innerText = "Add"
+        textInput.value = ""
+        selectedLi = null
+        return
+      }
         const task = textInput.value
 
         const li = document.createElement("li")
         li.innerText = task
+        li.classList.add("border" ,  "p-2" , "flex" , "justify-between" , "mb-2" , "bg-white")
+
+        // <i class="fa-solid fa-trash" style="color: rgb(116, 192, 252);"></i>
+        const deletebtn = document.createElement("i")
+        deletebtn.classList.add("fa-solid" ,  "fa-trash" , "text-red" , "cursor-pointer")
+
+        deletebtn.addEventListener("click" , (event)=>{
+          li.remove()
+        })
+
+        // <i class="fa-solid fa-pen" style="color: rgb(116, 192, 252);"></i>
+
+        const editbtn = document.createElement("i")
+        editbtn.classList.add("fa-solid" , "fa-pen" , "cursor-pointer")
+
+        editbtn.addEventListener("click" , (event)=>{
+          console.log(li);
+          addBtn.innerText = "Edit"
+          textInput.value = li.innerText
+          selectedLi = li
+          
+        })
+
+        const btndiv = document.createElement("div")
+        btndiv.classList.add("flex" , "gap-2")
+        btndiv.appendChild(editbtn)
+        btndiv.appendChild(deletebtn)
+
+        // li.appendChild(editbtn)
+        li.appendChild(btndiv)
 
         todolist.appendChild(li)
         console.log('task: ', task);
